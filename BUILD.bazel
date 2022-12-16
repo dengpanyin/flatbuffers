@@ -13,10 +13,10 @@ exports_files([
 # Public flatc library to compile flatbuffer files at runtime.
 cc_library(
     name = "flatbuffers",
-    hdrs = ["//:public_headers"],
+    hdrs = [":public_headers"],
     linkstatic = 1,
-    strip_include_prefix = "/include",
-    deps = ["//src:flatbuffers"],
+    strip_include_prefix = "include",
+    #deps = ["//src:flatbuffers"],
 )
 
 # Public C++ headers for the Flatbuffers library.
